@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Mazingira Yetu CBO",
+    "lat": -1.28333,
+    "lng": 36.81667,
+    "description": "Cleaning up the Mathare section of the river.",
+    "metrics": {
+      "waste_collected_kg": 1500,
+      "trees_planted": 120,
+      "jobs_created": 15
+    }
+  },
+  {
+    "id": 2,
+    "name": "Green Nairobi Initiative",
+    "lat": -1.2921,
+    "lng": 36.8219,
+    "description": "Focusing on bamboo planting for erosion control.",
+    "metrics": {
+      "waste_collected_kg": 500,
+      "trees_planted": 300,
+      "jobs_created": 5
+    }
+  }
+]

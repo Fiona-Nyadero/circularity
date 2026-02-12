@@ -1,0 +1,13 @@
+{
+"type": "FeatureCollection",
+"name": "cbos",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "name": "Youthprinua", "elevation": 0.0, "comment": "Youthprinua", "descriptio": "Youthprinua", "source": null, "url": null, "url name": null, "time": null }, "geometry": { "type": "Point", "coordinates": [ 36.880443645, -1.248675871 ] } },
+{ "type": "Feature", "properties": { "name": "Easy Urban Green Growers", "elevation": 0.0, "comment": "Easy Urban Green Growers", "descriptio": "Easy Urban Green Growers", "source": null, "url": null, "url name": null, "time": null }, "geometry": { "type": "Point", "coordinates": [ 36.885199183, -1.24889019 ] } },
+{ "type": "Feature", "properties": { "name": "LEMWO Reclaimed site2", "elevation": 0.0, "comment": "LEMWO Reclaimed site2", "descriptio": "LEMWO Reclaimed site2", "source": null, "url": null, "url name": null, "time": null }, "geometry": { "type": "Point", "coordinates": [ 36.896101089, -1.24340263 ] } },
+{ "type": "Feature", "properties": { "name": "LEMWO Reclaimed site1", "elevation": 0.0, "comment": "LEMWO Reclaimed site1", "descriptio": "LEMWO Reclaimed site1", "source": null, "url": null, "url name": null, "time": null }, "geometry": { "type": "Point", "coordinates": [ 36.890859276, -1.244699634 ] } },
+{ "type": "Feature", "properties": { "name": "LEMWO", "elevation": 0.0, "comment": "LEMWO", "descriptio": "LEMWO", "source": null, "url": null, "url name": null, "time": null }, "geometry": { "type": "Point", "coordinates": [ 36.899352316, -1.236670243 ] } },
+{ "type": "Feature", "properties": { "name": "Tempo Arts", "elevation": 0.0, "comment": "Tempo Arts", "descriptio": "Tempo Arts", "source": null, "url": null, "url name": null, "time": null }, "geometry": { "type": "Point", "coordinates": [ 36.899412639, -1.242591429 ] } }
+]
+}
