@@ -1,16 +1,69 @@
-# React + Vite
+# Circular Communities UI (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React-18-blue)
+![Vite](https://img.shields.io/badge/Build-Vite-purple)
+![Tailwind](https://img.shields.io/badge/Style-TailwindCSS-cyan)
 
-Currently, two official plugins are available:
+The interactive visualization layer for the **Nairobi River Circular Communities** platform. Built to resemble a high-end "Consultant Dashboard," it prioritizes map readability, data clarity, and a "Glassmorphism" aesthetic.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Tech Stack
+* **Core:** React.js (via Vite)
+* **Mapping:** React-Leaflet & Leaflet.js
+* **Styling:** TailwindCSS (v4)
+* **Icons:** CSS-based animations (Pulse Icons)
 
-## React Compiler
+## 📂 Directory Structure
+```text
+frontend/
+├── src/
+│   ├── components/     # React Components (Map, Sidebar)
+│   ├── data/           # Static GeoJSON Assets (River, Roads, Buildings)
+│   ├── App.jsx         # Main Layout & Intro Logic
+│   └── index.css       # Global Styles & Animations
+├── public/             # Static Assets
+└── vite.config.js      # Configuration
+🚀 Setup & Development
+Prerequisites
+Node.js (v16+) and npm installed.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Step-by-Step
+Navigate to the frontend directory:
 
-## Expanding the ESLint configuration
+Bash
+cd frontend
+Install Dependencies:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Bash
+npm install
+Start the Development Server:
+
+Bash
+npm run dev
+The application will launch at http://localhost:5173.
+
+🎨 Design System
+The UI uses a custom "Consultant" color palette defined in Tailwind:
+
+Brand Navy (#2F4156): Primary background, text.
+
+Brand Teal (#567C8D): Accents, secondary borders.
+
+Brand Beige (#F5EFEB): Panels, card backgrounds.
+
+Brand Amber (#F59E0B): Active data points (CBOs).
+
+🗺 Map Layers
+The map combines multiple data sources:
+
+Base Layer: CartoDB Dark Matter (via Leaflet).
+
+Context Layers: Buildings & Roads (local GeoJSON, semi-transparent).
+
+Analysis Layer: The Nairobi River (Cyan/Teal highlight).
+
+Interaction Layer: CBO Pulse Nodes (Interactive markers).
+
+⚠️ Common Issues
+Map Tiles Not Loading: Ensure you have an internet connection (tiles are fetched from OpenStreetMap/CartoDB).
+
+"Z-Index" Issues: If the sidebar isn't clickable, ensure z-[1000] and pointer-events-auto are applied in App.jsx.

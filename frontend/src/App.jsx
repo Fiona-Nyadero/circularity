@@ -9,20 +9,31 @@ function App() {
     <div className="relative h-screen w-screen overflow-hidden bg-brand-navy">
       
       {/* Map Layer */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 h-screen">
         <NairobiMap onSelectCBO={setSelectedCbo} />
+        <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_100px_rgba(2,6,23,0.8)] z-500"></div>
       </div>
 
-      {/* Floating Sidebar - THEME UPDATE */}
+      {/* Floating Sidebar */}
       <div className="absolute top-4 left-4 w-96 max-h-[90vh] overflow-y-auto 
-                      bg-brand-beige shadow-2xl rounded-sm z-10 p-6 
-                      border-l-4 border-brand-teal">
+                      rounded-sm z-10 p-8 shadow-2xl border-l-4 
+                      transition-all duration-500 ease-in-out group
+
+                      pointer-events-auto
+                      
+                      bg-brand-beige/80 backdrop-blur-md border-brand-teal/30
+                      hover:bg-brand-beige hover:border-brand-teal hover:shadow-3xl"
+>
         
         {/* Header */}
         <div className="mb-6 border-b border-brand-teal/20 pb-4">
-            <h1 className="text-2xl font-serif font-bold text-brand-navy">Nairobi River</h1>
-            <p className="text-xs text-brand-teal tracking-widest uppercase font-semibold mt-1">
-                Collective Intelligence Platform
+            <h1 className="text-3xl font-serif font-bold tracking-tight transition-all duration-300
+                           text-brand-navy/60 group-hover:text-brand-navy">
+                Circular Communities
+            </h1>
+            <p className="text-xs tracking-[0.2em] uppercase font-bold mt-2 transition-all duration-300
+                          text-brand-teal/50 group-hover:text-brand-teal">
+                Visualizing the Invisible
             </p>
         </div>
         
@@ -31,25 +42,25 @@ function App() {
             <div className="animate-fade-in">
                 <button 
                     onClick={() => setSelectedCbo(null)}
-                    className="mb-4 text-xs font-bold text-brand-teal hover:text-brand-navy flex items-center uppercase tracking-wide"
+                    className="mb-4 text-xs font-bold text-brand-teal hover:text-brand-navy flex items-center uppercase tracking-wide transition-colors"
                 >
                     ← Back to Overview
                 </button>
 
-                <h2 className="text-xl font-serif font-bold text-brand-navy mb-1">
+                <h2 className="text-xl font-serif font-bold mb-1 transition-colors duration-300
+                               text-brand-navy/80 group-hover:text-brand-navy">
                     {selectedCbo.name || "Unknown CBO"}
                 </h2>
                 <div className="h-1 w-12 bg-brand-teal mb-4"></div>
                 
-                {/* Metric Cards - Updated Colors */}
                 <div className="grid grid-cols-2 gap-3 my-6">
-                    <div className="bg-white p-3 shadow-sm border border-brand-sky/30">
+                    <div className="bg-white/80 group-hover:bg-white p-3 shadow-sm border border-brand-sky/30">
                         <span className="block text-2xl font-bold text-brand-navy">
                             {selectedCbo.waste_collected || "120"}
                         </span>
                         <span className="text-[10px] text-brand-teal uppercase font-bold">Kg Waste</span>
                     </div>
-                    <div className="bg-white p-3 shadow-sm border border-brand-sky/30">
+                    <div className="bg-white/80 group-hover:bg-white p-3 shadow-sm border border-brand-sky/30">
                         <span className="block text-2xl font-bold text-brand-navy">
                             {selectedCbo.trees_planted || "45"}
                         </span>
@@ -57,7 +68,7 @@ function App() {
                     </div>
                 </div>
 
-                <div className="space-y-3 text-sm text-brand-navy/80">
+                <div className="space-y-3 text-sm text-brand-navy/60 group-hover:text-brand-navy/80 transition-colors">
                     {Object.entries(selectedCbo)
                         .filter(([key]) => key !== 'name' && key !== 'geometry')
                         .map(([key, value]) => (
@@ -71,25 +82,24 @@ function App() {
                 </div>
             </div>
         ) : (
-            // Default View
             <div>
-                <div className="bg-white p-4 shadow-sm border border-brand-sky/50 mb-6">
-                    <p className="text-sm text-brand-navy leading-relaxed">
-                        <strong>Overview:</strong><br/>
-                        Visualizing the ecological impact of community organizations along the river basin. Select a node to view performance metrics.
+                <div className="p-4 shadow-sm mb-6">
+                    <p className="text-sm leading-relaxed transition-colors duration-300
+                                  text-brand-navy/60 group-hover:text-brand-navy">
+                        Transforming fragmented community efforts into <span className="font-bold text-brand-teal">visible, quantifiable data</span>.
+                    </p>
+                    <p className="text-sm leading-loose font-light transition-colors duration-300
+                                  text-brand-navy/50 group-hover:text-brand-navy/80">
+                        This platform aggregates critical circular economy metrics along the Nairobi River basin to guide systemic regeneration.
                     </p>
                 </div>
                 
-                <h3 className="font-bold text-brand-navy text-xs uppercase tracking-wide mb-3">Legend</h3>
-                <div className="space-y-3 text-sm">
-                    <div className="flex items-center">
-                        <span className="w-8 h-1 bg-brand-sky mr-3"></span>
-                        <span className="text-brand-navy">River Channel</span>
-                    </div>
-                    <div className="flex items-center">
-                        <span className="w-3 h-3 rounded-full bg-blue-500 border-2 border-white mr-3"></span>
-                        <span className="text-brand-navy">CBO Node</span>
-                    </div>
+                <div className="pt-8 mt-4">
+                    <p className="text-xs text-brand-teal/50 group-hover:text-brand-teal gap-2
+                                  uppercase tracking-widest font-semibold flex items-center">
+                        <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse border border-white"></span>
+                        Select a node to explore
+                    </p>
                 </div>
             </div>
         )}
