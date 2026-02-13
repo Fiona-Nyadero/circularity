@@ -1,5 +1,6 @@
+// frontend/src/components/Map.jsx
 import React from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, GeoJSON } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 
@@ -21,9 +22,11 @@ const NairobiMap = ({ onSelectCBO }) => {
   const position = [-1.248675, 36.880443]; // Youthprinua
 
   const riverStyle = {
-    color: "3b82f6",
-    weight: 5,
-    opacity: 0.7,
+    color: "#C8D9E6",
+    weight: 3,
+    opacity: 0.8,
+    fillColor: "#C8D9E6",
+    fillOpacity: 0.2
   }
 
   const onEachCBO = (feature, layer) => {
@@ -39,14 +42,20 @@ const NairobiMap = ({ onSelectCBO }) => {
   };
 
   return (
-    <MapContainer center={position} zoom={13} style={{ height: "500px", width: "100%" }}>
+    <MapContainer
+      center={position}
+      zoom={13}
+      style={{ height: "500px", width: "100%" }}
+      zoomControl={false}
+    >
       <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution='&copy; OpenStreetMap contributors'
+        url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png"
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+        className='map-tiles-filter'
       />
-      <JSON data={riverData} style={riverStyle} />
+      <GeoJSON data={riverData} style={riverStyle} />
 
-      <JSON data={cboData} onEachFeature={onEachCBO} />
+      <GeoJSON data={cboData} onEachFeature={onEachCBO} />
 
     </MapContainer>
   );

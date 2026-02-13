@@ -4,20 +4,20 @@ import json
 import pandas as pd
 
 app = Flask(__name__)
-CORS(app) # This allows your React app to talk to this Python app
+CORS(app)
 
 # Helper function to load data
 def load_data():
     with open('cbo_data.json', 'r') as f:
         return json.load(f)
 
-# Route 1: Get all CBOs (The Map needs this)
+# Route 1: Get all CBOs
 @app.route('/api/cbos', methods=['GET'])
 def get_cbos():
     data = load_data()
     return jsonify(data)
 
-# Route 2: Get Aggregated Impact (The Charts need this)
+# Route 2: Get Aggregated Impact
 @app.route('/api/impact', methods=['GET'])
 def get_impact():
     data = load_data()

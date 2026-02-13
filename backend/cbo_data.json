@@ -1,26 +1,65 @@
 [
   {
     "id": 1,
-    "name": "Mazingira Yetu CBO",
-    "lat": -1.28333,
-    "lng": 36.81667,
-    "description": "Cleaning up the Mathare section of the river.",
+    "name": "Tempo Arts Center",
+    "abbreviation": "TAC",
+    "lat": -1.242591429,
+    "lng": 36.899412639,
+    "description": "A performing arts center at the confluence of Mathare and Nairobi Rivers, engaging in land reclamation and waste recycling.",
+    "activities": "arts, culture, land reclamation, waste recycling",
+    "values": "Social, Cultural, Ecological, Aesthetic",
+    "challenges": "Planning vulnerabilities, Access challenges",
     "metrics": {
       "waste_collected_kg": 1500,
       "trees_planted": 120,
-      "jobs_created": 15
+      "jobs_created": 75
     }
   },
   {
     "id": 2,
-    "name": "Green Nairobi Initiative",
-    "lat": -1.2921,
-    "lng": 36.8219,
-    "description": "Focusing on bamboo planting for erosion control.",
+    "name": "Easy Urban Green Growers",
+    "abbreviation": "EUGG",
+    "lat": -1.24889019,
+    "lng": 36.885199183, 
+    "description": "Sustainable urban farming practice, environmental awareness and waste recycling.",
+    "activities": "waste recycling, tree planting, BSF farming, land reclamation, environmental education",
+    "values": "Social, Cultural, Ecological, Economic",
+    "challenges": "Planning vulnerabilities",
     "metrics": {
       "waste_collected_kg": 500,
       "trees_planted": 300,
-      "jobs_created": 5
+      "jobs_created": 50
+    }
+  },
+  {
+    "id": 3,
+    "name": "YouthPrinua",
+    "abbreviation": "YP",
+    "lat": -1.248675871,
+    "lng": 36.880443645,
+    "description": "Waste collection, waste segregation, plastics recycling and youth empowerment.",
+    "activities": "waste collection, waste recycling, environmental education, youth empowerment",
+    "values": "Social, Cultural, Ecological, Economic",
+    "challenges": "",
+    "metrics": {
+      "waste_collected_kg": 500,
+      "jobs_created": 35
+    }
+  },
+  {
+    "id": 4,
+    "name": "LuckySummer Environmental Management and Waste Organization",
+    "abbreviation": "LEWMO",
+    "lat": -1.236670243,
+    "lng": 36.899352316,
+    "description": "Waste collection, waste segregation, plastics recycling and youth empowerment.",
+    "activities": "waste collection, waste recycling, environmental education, youth empowerment, BSF farming, land reclamation",
+    "values": "Social, Cultural, Ecological, Economic",
+    "challenges": "Planning vulnerabilities",
+    "metrics": {
+      "waste_collected_kg": 500,
+      "trees_planted": 300,
+      "jobs_created": 50
     }
   }
 ]

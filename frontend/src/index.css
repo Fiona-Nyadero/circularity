@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -65,4 +67,19 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+/* Map Styling */
+.map-tiles-filter {
+    filter: sepia(100%) hue-rotate(170deg) saturate(150%) brightness(0.7) contrast(1.2);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #F5EFEB; 
+}
+::-webkit-scrollbar-thumb {
+    background: #567C8D; 
+    border-radius: 4px;
 }
