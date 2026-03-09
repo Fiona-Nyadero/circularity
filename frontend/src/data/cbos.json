@@ -2,12 +2,128 @@
 "type": "FeatureCollection",
 "name": "cbos",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-"features": [
-{ "type": "Feature", "properties": { "name": "Youthprinua", "elevation": 0.0, "comment": "Youthprinua", "descriptio": "Youthprinua", "source": null, "url": null, "url name": null, "time": null }, "geometry": { "type": "Point", "coordinates": [ 36.880443645, -1.248675871 ] } },
-{ "type": "Feature", "properties": { "name": "Easy Urban Green Growers", "elevation": 0.0, "comment": "Easy Urban Green Growers", "descriptio": "Easy Urban Green Growers", "source": null, "url": null, "url name": null, "time": null }, "geometry": { "type": "Point", "coordinates": [ 36.885199183, -1.24889019 ] } },
-{ "type": "Feature", "properties": { "name": "LEMWO Reclaimed site2", "elevation": 0.0, "comment": "LEMWO Reclaimed site2", "descriptio": "LEMWO Reclaimed site2", "source": null, "url": null, "url name": null, "time": null }, "geometry": { "type": "Point", "coordinates": [ 36.896101089, -1.24340263 ] } },
-{ "type": "Feature", "properties": { "name": "LEMWO Reclaimed site1", "elevation": 0.0, "comment": "LEMWO Reclaimed site1", "descriptio": "LEMWO Reclaimed site1", "source": null, "url": null, "url name": null, "time": null }, "geometry": { "type": "Point", "coordinates": [ 36.890859276, -1.244699634 ] } },
-{ "type": "Feature", "properties": { "name": "LEMWO", "elevation": 0.0, "comment": "LEMWO", "descriptio": "LEMWO", "source": null, "url": null, "url name": null, "time": null }, "geometry": { "type": "Point", "coordinates": [ 36.899352316, -1.236670243 ] } },
-{ "type": "Feature", "properties": { "name": "Tempo Arts", "elevation": 0.0, "comment": "Tempo Arts", "descriptio": "Tempo Arts", "source": null, "url": null, "url name": null, "time": null }, "geometry": { "type": "Point", "coordinates": [ 36.899412639, -1.242591429 ] } }
-]
+"features": [{
+    "type": "Feature",
+    "properties": {
+        "name": "Youthprinua",
+        "elevation": 0.0,
+        "comment": "YP",
+        "focus": "Waste Management",
+        "description": "A youth-led initiative focused on waste sorting, material recovery, pollution control, and innovative waste-for-water systems to improve river health and community livelihoods.",
+        "metrics": {
+            "Waste Sorted (Monthly)": "15 tons",
+            "Water Exchanged": "45,000 L",
+            "Institutions Served": "6",
+            "Youth Employed": "20"
+        },
+        "images": [
+            "/images/yp-1.jpg",
+            "/images/yp-2.jpg"
+        ],
+        "source": null,
+        "url": null,
+        "url name": null,
+        "time": null
+    },
+    "geometry": { "type": "Point", "coordinates": [ 36.880443645, -1.248675871 ] }
+},
+{
+    "type": "Feature",
+    "properties": {
+        "name": "Easy Urban Green Growers",
+        "elevation": 0.0,
+        "comment": "EUGG",
+        "focus": "Urban agriculture and ecological restoration",
+        "description": "A community-based organization focused on urban farming, composting, riverbank greening, and plastic upcycling to enhance nutrient cycling, biodiversity, and food security along the Nairobi River.",
+        "metrics": {
+            "Annual Food Production": "1,200 kg",
+            "Organic Waste Processed": "50 tons",
+            "Trees Established": "350",
+            "Plastic Upcycled": "300 kg"
+        },
+        "images": [
+            "/images/eugg-1.jpg",
+            "/images/eugg-2.jpg"
+        ],
+        "source": null,
+        "url": null,
+        "url name": null,
+        "time": null
+    },
+    "geometry": { "type": "Point", "coordinates": [ 36.885199183, -1.24889019 ] }
+},{
+    "type": "Feature",
+    "properties": {
+        "name": "LEMWO",
+        "elevation": 0.0,
+        "comment": "LEMWO Reclaimed Park2",
+        "description": "LEMWO Reclaimed Park from a former illegal dumpsite.",
+        "source": null,
+        "url": null,
+        "url name": null,
+        "time": null
+    },
+    "geometry": { "type": "Point", "coordinates": [ 36.896101089, -1.24340263 ] }
+},{ 
+    "type": "Feature",
+    "properties": {
+        "name": "LEMWO",
+        "elevation": 0.0,
+        "comment": "LEMWO Reclaimed Park1",
+        "description": "LEMWO Reclaimed Park from a former illegal dumpsite.",
+        "source": null,
+        "url": null,
+        "url name": null,
+        "time": null
+    },
+    "geometry": { "type": "Point", "coordinates": [ 36.890859276, -1.244699634 ] }
+},{
+    "type": "Feature",
+    "properties": {
+        "name": "LuckySummer Environmental Management and Waste Organisation",
+        "elevation": 0.0,
+        "comment": "LEMWO Waste Hub",
+        "focus": "Waste management and organic waste valorization",
+        "description": "A circular economy organization leveraging black soldier fly processing, waste sorting hubs, reclaimed riverbank parks, and urban livestock systems to convert organic waste into value-added products while enhancing ecosystem services.",
+        "metrics": {
+            "Organic Waste Processed": "120 tons",
+            "Bio-fertilizer Produced": "50 crates",
+            "Green Jobs Created": "120",
+            "Households Served": "2500"
+        },
+        "images": [
+            "/images/lewmo-1.jpg",
+            "/images/lewmo-2.jpg"
+        ],
+        "source": null,
+        "url": null,
+        "url name": null,
+        "time": null
+    },
+    "geometry": { "type": "Point", "coordinates": [ 36.899352316, -1.236670243 ] }
+},{
+    "type": "Feature",
+    "properties": {
+        "name": "Tempo Arts Centre",
+        "elevation": 0.0,
+        "comment": "TAC",
+        "focus": "Ecological Arts",
+        "description": "A creative community hub transforming degraded quarry and river-edge spaces into multifunctional ecological parks with flood regulation, biodiversity enhancement, and cultural programming.",
+        "metrics": {
+            "Area Restored": "5,000 sqm",
+            "Community Events": "24 / year",
+            "Tires Repurposed": "500",
+            "Stormwater Retained": "1,200 m3"
+        },
+        "images": [
+            "/images/tac-1.jpg",
+            "/images/tac-2.jpg"
+        ],
+        "source": null,
+        "url": null,
+        "url name": null,
+        "time": null
+    },
+    "geometry": { "type": "Point", "coordinates": [ 36.899412639, -1.242591429 ] }
+}]
 }
