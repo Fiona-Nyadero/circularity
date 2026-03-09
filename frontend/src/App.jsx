@@ -1,5 +1,6 @@
 // frontend/src/App.jsx
 import { useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import NairobiMap from './components/Map';
 
 function App() {
@@ -175,6 +176,7 @@ function App() {
         </div>
       )}
 
+      <Analytics />
     </div>
   );
 }
